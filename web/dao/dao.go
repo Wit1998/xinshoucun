@@ -31,7 +31,7 @@ type ConnImpl interface {
 	SearchOrder(id uint) (model.Order, error)
 
 	// 查询所有
-	SearchAll() ([]model.Order, error)
+	SearchAll() ([]*model.Order, error)
 
 	// 查询列表
 	SearchOrders(username string, page, limit int) ([]model.Order, error)
@@ -46,21 +46,15 @@ type ConnImpl interface {
 // 实例化接口
 // 创建
 func (c *Connect) CreateOrder(order model.Order) error {
-	//开始创建
-	rs := c.DbConnect.Begin()
-	result := rs.Create(order)
-	if err := result.Error; err != nil {
-		//创建失败，回滚
-		rs.Rollback()
+	rs := c.DbConnect.Create(&order)
+	if err := rs.Error; err != nil {
 		return err
 	}
-	rs.Commit()
 	return nil
 }
 
 // 查询
 func (c *Connect) SearchOrder(id uint) (model.Order, error) {
-
 	order := model.Order{
 		ID:       0,
 		UserName: "",
@@ -69,7 +63,7 @@ func (c *Connect) SearchOrder(id uint) (model.Order, error) {
 		FileUrl:  "",
 	}
 	Search := c.DbConnect.Where("id = ?", id)
-	if err := Search.First(order).Error; err != nil {
+	if err := Search.First(&order).Error; err != nil {
 		fmt.Println("err", err)
 	}
 	return order, nil
@@ -107,29 +101,27 @@ func (c *Connect) UpdateOrder(order map[string]interface{}) error {
 		rs.Rollback()
 		return err
 	}
+	return nil
+}
+
+// 更新Url
+func (c *Connect) UpdateUrl(id uint, url string) error {
+
+	order := model.Order{
+		ID:       0,
+		UserName: "",
+		Amount:   0,
+		Status:   "",
+		FileUrl:  "",
+	}
+	// 开始更新
+	rs := c.DbConnect.Begin()
+	if err := rs.Model(&order).Where("id = ?", id).Update("file_url", url).Error; err != nil {
+		// 如果找不到，则使用Rollback回滚,返回到上一级
+		rs.Rollback()
+		return err
+	}
 	// 找到则提交
 	rs.Commit()
 	return nil
 }
-
-//// 更新Url
-//func (c *Connect) UpdateUrl(id uint, url string) error {
-//
-//	order := model.Order{
-//		ID:       0,
-//		UserName: "",
-//		Amount:   0,
-//		Status:   "",
-//		FileUrl:  "",
-//	}
-//	// 开始更新
-//	rs := c.DbConnect.Begin()
-//	if err := rs.Model(&order).Where("id = ?", id).Update("file_url", url).Error; err != nil {
-//		// 如果找不到，则使用Rollback回滚,返回到上一级
-//		rs.Rollback()
-//		return err
-//	}
-//	// 找到则提交
-//	rs.Commit()
-//	return nil
-//}

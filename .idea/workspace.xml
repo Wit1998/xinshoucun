@@ -621,6 +621,23 @@
       <change afterPath="$PROJECT_DIR$/../web/go.sum" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../web/gorm.db" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../web/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/xinshoucun.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/db/db.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/handler/hander.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/model/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/handler/hander.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/handler/hander.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/service/service_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/service/service_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -636,7 +653,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/web" />
   </component>
   <component name="ProjectId" id="1ezLtZkfWNtjoYEH4Odp6VBqvNG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

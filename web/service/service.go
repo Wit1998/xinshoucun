@@ -1,11 +1,6 @@
 package service
 
 import (
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"os"
-	"time"
 	"xinshoucun/web/dao"
 	"xinshoucun/web/model"
 )
@@ -23,7 +18,7 @@ func NewObject(dao *dao.Connect) *Object {
 func (s *Object) AddOrder(add model.Order) error {
 
 	order := model.Order{
-		ID:       0,
+		ID:       2,
 		UserName: add.UserName,
 		Amount:   add.Amount,
 		Status:   add.Status,
@@ -37,7 +32,7 @@ func (s *Object) AddOrder(add model.Order) error {
 }
 
 // 查询数据
-func (s *Object) OrderDetail(id uint) (model.Order, error) {
+func (s *Object) OrderDetail(id uint) (*model.Order, error) {
 
 	order, err := s.dao.SearchOrder(id)
 	if err != nil {
@@ -47,7 +42,7 @@ func (s *Object) OrderDetail(id uint) (model.Order, error) {
 }
 
 // 查询数据列表
-func (s *Object) OrderList(order model.SearchList) ([]model.Order, error) {
+func (s *Object) OrderList(order model.SearchList) (*[]model.Order, error) {
 
 	if order.Page <= 0 {
 		order.Page = 1
@@ -82,38 +77,38 @@ func (s *Object) UpdateFileUrl(id uint, url string) error {
 	return nil
 }
 
-// 下载文件
-func (s *Object) DownloadFile(id uint) (string, error) {
-
-	order, err := s.dao.SearchOrder(id)
-	if err != nil {
-		panic(err)
-	}
-	url := order.FileUrl
-
-	rs, err := http.Get(url)
-	if err != nil {
-		panic(err)
-	}
-	body, err := ioutil.ReadAll(rs.Body)
-	defer rs.Body.Close()
-	if err != nil {
-		panic(err)
-	}
-	// 文件命名
-	timeStamp := time.Now().Unix()
-	fileName := fmt.Sprintf("download-%d.jpg", timeStamp)
-	// 存放文件路径
-	filePath := fmt.Sprintf("new/%s", fileName)
-	file, err := os.Create(filePath)
-	if err != nil {
-		panic(err)
-	}
-
-	defer file.Close()
-	_, err = file.Write(body)
-	if err != nil {
-		panic(err)
-	}
-	return filePath, nil
-}
+//// 下载文件
+//func (s *Object) DownloadFile(id uint) (string, error) {
+//
+//	order, err := s.dao.SearchOrder(id)
+//	if err != nil {
+//		panic(err)
+//	}
+//	url := order.FileUrl
+//
+//	rs, err := http.Get(url)
+//	if err != nil {
+//		panic(err)
+//	}
+//	body, err := ioutil.ReadAll(rs.Body)
+//	defer rs.Body.Close()
+//	if err != nil {
+//		panic(err)
+//	}
+//	// 文件命名
+//	timeStamp := time.Now().Unix()
+//	fileName := fmt.Sprintf("download-%d.jpg", timeStamp)
+//	// 存放文件路径
+//	filePath := fmt.Sprintf("new/%s", fileName)
+//	file, err := os.Create(filePath)
+//	if err != nil {
+//		panic(err)
+//	}
+//
+//	defer file.Close()
+//	_, err = file.Write(body)
+//	if err != nil {
+//		panic(err)
+//	}
+//	return filePath, nil
+//}

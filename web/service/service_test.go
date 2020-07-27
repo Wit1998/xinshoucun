@@ -73,12 +73,11 @@ func TestObject_UpdateOrder(t *testing.T) {
 
 }
 
-//
-//// 更新url
-//func TestObject_UpdateFileUrl(t *testing.T) {
-//	Object := InitService()
-//	id := 10
-//	url := "123456"
-//	err := Object.UpdateFileUrl(uint(id), url)
-//	fmt.Println("err", err)
-//}
+// 更新url
+func TestObject_UpdateFileUrl(t *testing.T) {
+	Object := InitService()
+	id := 10
+	url := "123456"
+	err := Object.UpdateFileUrl(uint(id), url)
+	fmt.Println("err", err)
+}
