@@ -666,43 +666,68 @@
       <recent name="$PROJECT_DIR$/demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestDemo_order_CreateDemo in xinshoucun/web/model">
-    <configuration name="go build xinshoucun/web" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestObject_UpdateOrder in xinshoucun/web/service">
+    <configuration name="TestObject_AddOrder in xinshoucun/web/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="xinshoucun" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/web/main.go" />
-      <package value="xinshoucun/web" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDemo_order_CreateDemo in xinshoucun/web/model" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="xinshoucun" />
-      <working_directory value="$PROJECT_DIR$/web/model" />
+      <working_directory value="$PROJECT_DIR$/web/service" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="xinshoucun/web/model" />
+      <package value="xinshoucun/web/service" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestDemo_order_CreateDemo$" />
+      <pattern value="^TestObject_AddOrder$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestInit in xinshoucun/web/db" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestObject_OrderDetail in xinshoucun/web/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="xinshoucun" />
-      <working_directory value="$PROJECT_DIR$/web/db" />
+      <working_directory value="$PROJECT_DIR$/web/service" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="xinshoucun/web/db" />
+      <package value="xinshoucun/web/service" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestInit$" />
+      <pattern value="^TestObject_OrderDetail$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestObject_OrderList in xinshoucun/web/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="xinshoucun" />
+      <working_directory value="$PROJECT_DIR$/web/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="xinshoucun/web/service" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestObject_OrderList$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestObject_UpdateOrder in xinshoucun/web/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="xinshoucun" />
+      <working_directory value="$PROJECT_DIR$/web/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="xinshoucun/web/service" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestObject_UpdateOrder$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test xinshoucun/web/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="xinshoucun" />
+      <working_directory value="$PROJECT_DIR$/web/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="xinshoucun/web/service" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestDemo_order_CreateDemo in xinshoucun/web/model" />
-        <item itemvalue="Go Test.TestInit in xinshoucun/web/db" />
-        <item itemvalue="Go Build.go build xinshoucun/web" />
+        <item itemvalue="Go Test.TestObject_UpdateOrder in xinshoucun/web/service" />
+        <item itemvalue="Go Test.TestObject_OrderList in xinshoucun/web/service" />
+        <item itemvalue="Go Test.TestObject_OrderDetail in xinshoucun/web/service" />
+        <item itemvalue="Go Test.TestObject_AddOrder in xinshoucun/web/service" />
+        <item itemvalue="Go Test.go test xinshoucun/web/service" />
       </list>
     </recent_temporary>
   </component>
@@ -730,22 +755,22 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="1000" y="285" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1595420362419" />
-    <state width="1336" height="251" key="GridCell.Tab.0.bottom" timestamp="1595483204513">
+    <state width="1794" height="444" key="GridCell.Tab.0.bottom" timestamp="1595816672921">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1336" height="251" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1595483204513" />
-    <state width="1336" height="251" key="GridCell.Tab.0.center" timestamp="1595483204511">
+    <state width="1794" height="444" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1595816672921" />
+    <state width="1794" height="444" key="GridCell.Tab.0.center" timestamp="1595816672921">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1336" height="251" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1595483204511" />
-    <state width="1336" height="251" key="GridCell.Tab.0.left" timestamp="1595483204510">
+    <state width="1794" height="444" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1595816672921" />
+    <state width="1794" height="444" key="GridCell.Tab.0.left" timestamp="1595816672920">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1336" height="251" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1595483204510" />
-    <state width="1336" height="251" key="GridCell.Tab.0.right" timestamp="1595483204512">
+    <state width="1794" height="444" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1595816672920" />
+    <state width="1794" height="444" key="GridCell.Tab.0.right" timestamp="1595816672921">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1336" height="251" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1595483204512" />
+    <state width="1794" height="444" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1595816672921" />
     <state width="1336" height="316" key="GridCell.Tab.1.bottom" timestamp="1595483204506">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -766,5 +791,16 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="698" y="162" width="1037" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1595397790904" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/web/service/service_test.go</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

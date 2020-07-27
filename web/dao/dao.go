@@ -1,6 +1,7 @@
 package dao
 
 import (
+	"fmt"
 	"github.com/jinzhu/gorm"
 	"xinshoucun/web/db"
 	"xinshoucun/web/model"
@@ -69,7 +70,7 @@ func (c *Connect) SearchOrder(id uint) (model.Order, error) {
 	}
 	Search := c.DbConnect.Where("id = ?", id)
 	if err := Search.First(order).Error; err != nil {
-		panic(err)
+		fmt.Println("err", err)
 	}
 	return order, nil
 }

@@ -9,7 +9,6 @@ import (
 
 func main() {
 	// 初始化数据库,建库，建表
-	dao.NewMyConnect()
 	// 初始化对象
 	obj := dao.NewMyConnect()
 	handler.ObjectService = service.NewObject(obj)

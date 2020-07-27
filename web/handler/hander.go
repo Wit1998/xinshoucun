@@ -41,7 +41,13 @@ func AddOrder(c *gin.Context) {
 // 查询单条数据
 func OrderDetail(c *gin.Context) {
 
-	get := model.Order{}
+	get := model.Order{
+		ID:       1,
+		UserName: "",
+		Amount:   0,
+		Status:   "",
+		FileUrl:  "",
+	}
 	if err := c.ShouldBind(&get); err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "参数不正确",
@@ -63,8 +69,8 @@ func OrderDetail(c *gin.Context) {
 
 // 查询列表数据
 func OrderList(c *gin.Context) {
-	listrs := model.SearchList{}
-	if err := c.ShouldBind(&listrs); err != nil {
+	listRS := model.SearchList{}
+	if err := c.ShouldBind(&listRS); err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "参数不正确",
 		})

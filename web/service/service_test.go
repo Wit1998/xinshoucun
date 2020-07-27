@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"testing"
 	"xinshoucun/web/dao"
-	"xinshoucun/web/db"
 	"xinshoucun/web/model"
 )
 
 // 初始化数据库连接
 func InitService() *Object {
 
-	dbLink, _ := db.BuildDb()
-	Dao := dao.Connect{Db: dbLink}
-	Object := &Object{dao: Dao}
-	return Object
+	// 初始化数据库,建库，建表
+	// 初始化对象
+	obj := dao.NewMyConnect()
+	rs := NewObject(obj)
+	return rs
 }
 
 // 添加
@@ -22,14 +22,14 @@ func TestObject_AddOrder(t *testing.T) {
 
 	Object := InitService()
 
-	req := model.Order{
+	rs := model.Order{
 		UserName: "",
 		Amount:   0,
 		Status:   "",
 		FileUrl:  "",
 	}
 
-	err := Object.AddOrder(req)
+	err := Object.AddOrder(rs)
 	fmt.Println("err", err)
 }
 
@@ -44,7 +44,7 @@ func TestObject_OrderDetail(t *testing.T) {
 		fmt.Println("err", err)
 	}
 	if id != rs.ID {
-		panic("id != rs.ID, err")
+		fmt.Println("id != rs.ID err")
 	}
 }
 
@@ -67,17 +67,18 @@ func TestObject_UpdateOrder(t *testing.T) {
 
 	Object := InitService()
 
-	req := map[string]interface{}{"Amount": 1, "Status": "1", "FileUrl": "1"}
-	err := Object.UpdateOrder(req)
+	rs := map[string]interface{}{"Amount": 1, "Status": "1", "FileUrl": "1"}
+	err := Object.UpdateOrder(rs)
 	fmt.Println("err", err)
 
 }
 
-// 更新url
-func TestObject_UpdateFileUrl(t *testing.T) {
-	Object := InitService()
-	id := 10
-	url := "123456"
-	err := Object.UpdateFileUrl(uint(id), url)
-	fmt.Println("err", err)
-}
+//
+//// 更新url
+//func TestObject_UpdateFileUrl(t *testing.T) {
+//	Object := InitService()
+//	id := 10
+//	url := "123456"
+//	err := Object.UpdateFileUrl(uint(id), url)
+//	fmt.Println("err", err)
+//}

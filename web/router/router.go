@@ -16,10 +16,10 @@ func SetupRouter() *gin.Engine {
 	router.POST("/list", handler.OrderList)
 	// 更新
 	router.POST("/update", handler.UpdateOrder)
-	// 上传s
-	router.POST("/upload", handler.Upload)
-	// 下载
-	router.POST("/download", handler.DownloadFile)
+	//// 上传
+	//router.POST("/upload", handler.Upload)
+	//// 下载
+	//router.POST("/download", handler.DownloadFile)
 
 	return router
 }
