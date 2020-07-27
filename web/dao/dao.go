@@ -112,24 +112,24 @@ func (c *Connect) UpdateOrder(order map[string]interface{}) error {
 	return nil
 }
 
-// 更新Url
-func (c *Connect) UpdateUrl(id uint, url string) error {
-
-	order := model.Order{
-		ID:       0,
-		UserName: "",
-		Amount:   0,
-		Status:   "",
-		FileUrl:  "",
-	}
-	// 开始更新
-	rs := c.DbConnect.Begin()
-	if err := rs.Model(&order).Where("id = ?", id).Update("file_url", url).Error; err != nil {
-		// 如果找不到，则使用Rollback回滚,返回到上一级
-		rs.Rollback()
-		return err
-	}
-	// 找到则提交
-	rs.Commit()
-	return nil
-}
+//// 更新Url
+//func (c *Connect) UpdateUrl(id uint, url string) error {
+//
+//	order := model.Order{
+//		ID:       0,
+//		UserName: "",
+//		Amount:   0,
+//		Status:   "",
+//		FileUrl:  "",
+//	}
+//	// 开始更新
+//	rs := c.DbConnect.Begin()
+//	if err := rs.Model(&order).Where("id = ?", id).Update("file_url", url).Error; err != nil {
+//		// 如果找不到，则使用Rollback回滚,返回到上一级
+//		rs.Rollback()
+//		return err
+//	}
+//	// 找到则提交
+//	rs.Commit()
+//	return nil
+//}
